@@ -10,3 +10,6 @@ vim.keymap.set("n", "<leader>ls", ":ls<Enter>")
 
 -- Line numbers
 vim.keymap.set("n", "<leader>rn", ":set relativenumber!<Enter>")
+
+-- Lazygit
+vim.keymap.set("n", "<leader>gg", ":LazyGit<Enter>")
