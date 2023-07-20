@@ -69,12 +69,19 @@ return require('packer').startup(function(use)
       end
   }
 
-  use{
+  use {
       "kdheepak/lazygit.nvim",
       -- optional for floating window border decoration
       requires = {
           "nvim-lua/plenary.nvim",
       },
+  }
+
+  use {
+      'numToStr/Comment.nvim',
+      config = function()
+          require('Comment').setup()
+      end
   }
 
 end)
