@@ -19,3 +19,13 @@ vim.keymap.set("n", "<leader>gg", ":LazyGit<Enter>")
 -- Windows
 vim.keymap.set("n", "<leader>w", "<C-w>")
 
+-- Tabs
+vim.keymap.set("n", "<C-t>n", "<cmd>tabnew<cr>")
+vim.keymap.set("n", "<C-t>c", "<cmd>tabc<cr>")
+
+-- Navigation
+
+-- Keeps the cursor in the middle of the screen
+-- on half-page jumps
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
