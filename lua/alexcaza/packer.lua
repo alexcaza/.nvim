@@ -97,4 +97,19 @@ return require('packer').startup(function(use)
 
   use { 'jose-elias-alvarez/typescript.nvim' }
 
+  use {
+      'nvim-lualine/lualine.nvim',
+      requires = {
+          'linrongbin16/lsp-progress.nvim',
+          opt = true
+      }
+  }
+
+  use {
+      'linrongbin16/lsp-progress.nvim',
+      config = function()
+          require('lsp-progress').setup()
+      end
+  }
+
 end)
