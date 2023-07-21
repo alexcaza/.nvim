@@ -86,4 +86,9 @@ return require('packer').startup(function(use)
 
   use { 'HiPhish/rainbow-delimiters.nvim' }
 
+  use {
+      "folke/todo-comments.nvim",
+      requires = { "nvim-lua/plenary.nvim" }
+  }
+
 end)
