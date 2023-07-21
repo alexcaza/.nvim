@@ -32,6 +32,11 @@ lsp.setup_nvim_cmp({
 lsp.on_attach(function(client, bufnr)
 	local opts = { buffer = bufnr, remap = false }
 
+    vim.cmd([[autocmd CursorHold   * lua vim.lsp.buf.document_highlight()]])
+    vim.cmd([[autocmd CursorHoldI  * lua vim.lsp.buf.document_highlight()]])
+    vim.cmd([[autocmd CursorMoved  * lua vim.lsp.buf.clear_references()]])
+    vim.cmd([[autocmd CursorMovedI * lua vim.lsp.buf.clear_references()]])
+
 	vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
 	vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
 	vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
