@@ -91,4 +91,8 @@ return require('packer').startup(function(use)
       requires = { "nvim-lua/plenary.nvim" }
   }
 
+  use { 'jose-elias-alvarez/null-ls.nvim' }
+
+  use{ 'MunifTanjim/prettier.nvim' }
+
 end)
