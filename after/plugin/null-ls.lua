@@ -5,11 +5,15 @@ local event = "BufWritePre" -- or "BufWritePost"
 local async = event == "BufWritePost"
 
 null_ls.setup({
-  on_attach = function(client, bufnr)
-    if client.supports_method("textDocument/formatting") then
-      vim.keymap.set("n", "<Leader>f", function()
-        vim.lsp.buf.format({ bufnr = vim.api.nvim_get_current_buf() })
-      end, { buffer = bufnr, desc = "[lsp] format" })
+    sources = {
+        null_ls.builtins.code_actions.eslint,
+        require('typescript.extensions.null-ls.code-actions')
+    },
+    on_attach = function(client, bufnr)
+        if client.supports_method("textDocument/formatting") then
+            vim.keymap.set("n", "<Leader>f", function()
+                vim.lsp.buf.format({ bufnr = vim.api.nvim_get_current_buf() })
+            end, { buffer = bufnr, desc = "[lsp] format" })
 
       -- format on save
       vim.api.nvim_clear_autocmds({ buffer = bufnr, group = group })

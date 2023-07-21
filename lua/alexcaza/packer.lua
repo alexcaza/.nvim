@@ -95,4 +95,6 @@ return require('packer').startup(function(use)
 
   use{ 'MunifTanjim/prettier.nvim' }
 
+  use { 'jose-elias-alvarez/typescript.nvim' }
+
 end)
