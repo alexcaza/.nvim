@@ -84,4 +84,6 @@ return require('packer').startup(function(use)
       end
   }
 
+  use { 'HiPhish/rainbow-delimiters.nvim' }
+
 end)
