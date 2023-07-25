@@ -5,6 +5,13 @@ lualine.setup({
         icons_enabled = false
     },
     sections = {
+        lualine_a = {
+            'branch',
+            'filename'
+        },
+        lualine_b = {
+            'buffers'
+        },
         lualine_c = {
             "require('lsp-progress').progress()"
         }
