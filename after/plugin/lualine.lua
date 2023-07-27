@@ -9,9 +9,6 @@ lualine.setup({
             'branch',
             'filename'
         },
-        lualine_b = {
-            'buffers'
-        },
         lualine_c = {
             "require('lsp-progress').progress()"
         }
