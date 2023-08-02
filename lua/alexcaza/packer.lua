@@ -114,4 +114,6 @@ return require('packer').startup(function(use)
 
   use { 'lewis6991/gitsigns.nvim' }
 
+  use { 'rust-lang/rust.vim' }
+
 end)
