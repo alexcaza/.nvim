@@ -10,7 +10,10 @@ lsp.ensure_installed({
 	-- 'tsserver',
 	'eslint',
 	'rust_analyzer',
-	'clojure_lsp'
+	'clojure_lsp',
+    'rubocop',
+    'ruby_ls',
+    'ruby-lsp-rails'
 })
 
 local cmp = require('cmp')
