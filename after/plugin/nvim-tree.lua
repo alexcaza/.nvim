@@ -30,4 +30,9 @@ tree.setup({
     }
 });
 
-vim.keymap.set('n', '<leader>ft', vim.cmd.NvimTreeToggle);
+function toggle_tree_at_current_file() 
+    local api = require("nvim-tree.api")
+    api.tree.toggle({find_file=true})
+end
+
+vim.keymap.set('n', '<leader>ft', toggle_tree_at_current_file);
