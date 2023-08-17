@@ -13,7 +13,8 @@ lsp.ensure_installed({
 	'clojure_lsp',
     'rubocop',
     'ruby_ls',
-    'ruby-lsp-rails'
+    'cssmodules_ls',
+    'cssls'
 })
 
 local cmp = require('cmp')
@@ -36,7 +37,7 @@ lsp.setup_nvim_cmp({
 lsp.on_attach(function(client, bufnr)
 	local opts = { buffer = bufnr, remap = false }
 
-    vim.cmd([[autocmd CursorHold   * lua vim.lsp.buf.document_highlight()]])
+    vim.cmd([[autocmd CursorHold   * silent! lua vim.lsp.buf.document_highlight()]])
     vim.cmd([[autocmd CursorHoldI  * lua vim.lsp.buf.document_highlight()]])
     vim.cmd([[autocmd CursorMoved  * lua vim.lsp.buf.clear_references()]])
     vim.cmd([[autocmd CursorMovedI * lua vim.lsp.buf.clear_references()]])
