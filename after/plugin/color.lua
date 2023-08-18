@@ -1,7 +1,7 @@
 
 function ColorMyPencil(color)
-	color = color or "rose-pine"
-	vim.cmd.colorscheme('rose-pine')
+	color = color or "kanagawa"
+	vim.cmd.colorscheme('kanagawa')
 
 	-- Would be cool for this function to be able to take 
 	-- in a settings object or be flexible across multiple themes.
