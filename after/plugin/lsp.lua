@@ -8,6 +8,7 @@ lsp.nvim_workspace()
 lsp.ensure_installed({
     -- tsserver is handled in typescript.lua
 	-- 'tsserver',
+    'json',
 	'eslint',
 	'rust_analyzer',
 	'clojure_lsp',
@@ -38,7 +39,7 @@ lsp.on_attach(function(client, bufnr)
 	local opts = { buffer = bufnr, remap = false }
 
     vim.cmd([[autocmd CursorHold   * silent! lua vim.lsp.buf.document_highlight()]])
-    vim.cmd([[autocmd CursorHoldI  * lua vim.lsp.buf.document_highlight()]])
+    vim.cmd([[autocmd CursorHoldI  * silent! lua vim.lsp.buf.document_highlight()]])
     vim.cmd([[autocmd CursorMoved  * lua vim.lsp.buf.clear_references()]])
     vim.cmd([[autocmd CursorMovedI * lua vim.lsp.buf.clear_references()]])
 
