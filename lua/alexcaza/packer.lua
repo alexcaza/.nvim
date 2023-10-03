@@ -112,6 +112,8 @@ return require('packer').startup(function(use)
 
   use { 'f-person/git-blame.nvim' }
 
+  use { 'rhysd/git-messenger.vim' }
+
   -- install without yarn or npm
   use({
       "iamcco/markdown-preview.nvim",
