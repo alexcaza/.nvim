@@ -127,4 +127,6 @@ return require('packer').startup(function(use)
       ft = { "markdown" }, 
   })
 
+  use { 'rose-pine/neovim', as = 'rose-pine' }
+
 end)
