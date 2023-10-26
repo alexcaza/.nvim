@@ -12,8 +12,8 @@ lsp.ensure_installed({
 	'eslint',
 	'rust_analyzer',
 	'clojure_lsp',
-    'rubocop',
-    'ruby_ls',
+    'solargraph',
+    -- 'rubocop',
     'cssmodules_ls',
     'cssls'
 })
