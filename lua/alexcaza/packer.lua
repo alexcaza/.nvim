@@ -114,12 +114,6 @@ return require('packer').startup(function(use)
 
   use { 'rhysd/git-messenger.vim' }
 
-  -- install without yarn or npm
-  use({
-      "iamcco/markdown-preview.nvim",
-      run = function() vim.fn["mkdp#util#install"]() end,
-  })
-
   use({ 
       "iamcco/markdown-preview.nvim", 
       run = "cd app && npm install",
@@ -128,5 +122,7 @@ return require('packer').startup(function(use)
   })
 
   use { 'rose-pine/neovim', as = 'rose-pine' }
+
+  use { 'Almo7aya/openingh.nvim' }
 
 end)
