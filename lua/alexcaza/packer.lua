@@ -24,8 +24,6 @@ return require('packer').startup(function(use)
 
   use { 'mbbill/undotree' }
 
-  use { 'tpope/vim-fugitive' }
-
   use({
 	  "kylechui/nvim-surround",
 	  tag = "*", -- Use for stability; omit to use `main` branch for the latest features
