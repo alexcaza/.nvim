@@ -16,7 +16,8 @@ lsp.ensure_installed({
     -- 'rubocop',
     'cssmodules_ls',
     'cssls',
-    'hls'
+    'hls',
+    'emmet_ls'
 })
 
 local cmp = require('cmp')
