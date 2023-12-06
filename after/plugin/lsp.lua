@@ -15,7 +15,8 @@ lsp.ensure_installed({
     'solargraph',
     -- 'rubocop',
     'cssmodules_ls',
-    'cssls'
+    'cssls',
+    'hls'
 })
 
 local cmp = require('cmp')
