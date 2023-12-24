@@ -8,6 +8,7 @@ lsp.nvim_workspace()
 lsp.ensure_installed({
     -- tsserver is handled in typescript.lua
 	-- 'tsserver',
+    'gopls',
 	'eslint',
     'svelte',
 	'rust_analyzer',
