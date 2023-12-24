@@ -45,6 +45,7 @@ lsp.on_attach(function(client, bufnr)
     vim.cmd([[autocmd CursorHoldI  * silent! lua vim.lsp.buf.document_highlight()]])
     vim.cmd([[autocmd CursorMoved  * silent! lua vim.lsp.buf.clear_references()]])
     vim.cmd([[autocmd CursorMovedI * silent! lua vim.lsp.buf.clear_references()]])
+    vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
 
 	vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
 	vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
