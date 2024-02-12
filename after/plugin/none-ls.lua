@@ -7,6 +7,7 @@ local async = event == "BufWritePost"
 null_ls.setup({
     sources = {
         null_ls.builtins.code_actions.eslint,
+        null_ls.builtins.formatting.biome,
         require('typescript.extensions.null-ls.code-actions')
     },
     on_attach = function(client, bufnr)
