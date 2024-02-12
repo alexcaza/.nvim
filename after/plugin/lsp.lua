@@ -18,7 +18,8 @@ lsp.ensure_installed({
     'cssmodules_ls',
     'cssls',
     'hls',
-    'emmet_ls'
+    'emmet_ls',
+    'biome'
 })
 
 local cmp = require('cmp')
